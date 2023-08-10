@@ -15,11 +15,11 @@ class Migration(migrations.Migration):
             name='Delivery',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('Recipient_name', models.CharField(max_length=20)),
-                ('Recipient_phone', models.BigIntegerField()),
-                ('Delivery_address', models.CharField(max_length=100)),
-                ('Delivery_date', models.DateTimeField()),
-                ('Delivery_status', models.CharField(max_length=34)),
+                ('recipient_name', models.CharField(max_length=20)),
+                ('recipient_phone', models.BigIntegerField()),
+                ('delivery_address', models.CharField(max_length=100)),
+                ('delivery_date', models.DateTimeField()),
+                ('delivery_status', models.CharField(max_length=34)),
             ],
         ),
     ]

@@ -7,4 +7,4 @@ class Delivery(models.Model):
     delivery_address= models.CharField(max_length=100)
     delivery_date= models.DateTimeField()
     delivery_status= models.CharField(max_length=34)
-    delivery_time= models.TimeField()
+    

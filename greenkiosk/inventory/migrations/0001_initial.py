@@ -23,7 +23,8 @@ class Migration(migrations.Migration):
                 ('date_created', models.DateTimeField(auto_now_add=True)),
                 ('date_updated', models.DateTimeField(auto_now=True)),
                 ('quantity', models.PositiveIntegerField()),
-                ('Vendor', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='vendor.vendor')),
+                ('Vendor', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='vendor.vendor'))
+              
             ],
         ),
     ]
