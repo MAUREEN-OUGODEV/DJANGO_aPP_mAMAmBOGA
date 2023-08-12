@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     'feedback',
     'notification',
     'order',
-    'refund'
+    'refund',
+    'signUp',
 ]
 
 MIDDLEWARE = [

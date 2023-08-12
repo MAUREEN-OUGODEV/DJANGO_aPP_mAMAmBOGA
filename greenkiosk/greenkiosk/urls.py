@@ -20,9 +20,13 @@ from django.conf import settings
 
 
 urlpatterns = [
+    
     path('admin/', admin.site.urls),
     path("inventory/",include("inventory.urls")),
     path("customer/",include("customer.urls")),
+    path("customer/",include("signup.urls")),
+    path("vendor/",include("vendor.urls")),
+    path("vendor/",include("signUp.urls")),
     
 ]
 if settings.DEBUG:
