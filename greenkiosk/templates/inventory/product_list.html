@@ -40,7 +40,29 @@
     .product-container img{
 height: 300px;
 width: 300px;
+margin-top: 5%;
+border-radius: 20px;
     }
+    .view{
+      margin-left: 5%;
+      background-color: #d5d818;
+      padding: 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
+    }
+    .edit{
+      margin-left: 5%;
+      background-color: #22ad10;
+      padding: 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
+    }
+    .allproducts{
+      margin: 5%;
+    }
+    
   </style>
 </head>
  <body>
@@ -50,8 +72,8 @@ width: 300px;
             <img src="{{product.image.url}}" class="img"/>
             <h1 class="product-name">{{ product.name }}</h1>
             
-             <a href="{% url 'product_detail_view' id=product.id %}">View Details</a>
-             <a href="{% url 'product_update_view' id=product.id %}">Edit Product</a>
+             <a class="view"href="{% url 'product_detail_view' id=product.id %}">View Details</a>
+             <a  class="edit"href="{% url 'product_update_view' id=product.id %}">Edit Product</a>
         </div>
     {% endfor %}
 </div>
