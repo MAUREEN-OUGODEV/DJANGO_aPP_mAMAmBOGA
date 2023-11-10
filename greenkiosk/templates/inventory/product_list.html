@@ -62,11 +62,25 @@ border-radius: 20px;
     .allproducts{
       margin: 5%;
     }
+    .green{
+      text-align: center;
+      background-color: #09b835;
+      padding: 50px;
+      font-size: 30px;
+    }
+    .kiosk{
+      color: #ecb709;
+    }
+    .product-name{
+      text-align: center;
+    }
     
   </style>
 </head>
  <body>
+  <h1 class="green">Green<span class="kiosk">Kiosk</span></h1>
   <div class="allproducts">
+
     {% for product in products %}
         <div class="product-container">
             <img src="{{product.image.url}}" class="img"/>

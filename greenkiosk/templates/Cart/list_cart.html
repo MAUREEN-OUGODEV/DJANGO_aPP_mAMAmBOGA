@@ -53,8 +53,22 @@
         }
         .action-button {
             text-decoration: none;
-            color: #d3d60e;
+            color: #f1f1e6;
             font-weight: bold;
+            background-color: #d3d60e;
+            padding: 20px;
+            text-align: center;
+            border-radius: 20px;
+            margin-left: 10%;
+        }
+        .action {
+            text-decoration: none;
+            color: #f1f1e6;
+            font-weight: bold;
+            background-color: #d67f0e;
+            padding: 20px;
+            text-align: center;
+            border-radius: 20px;
         }
     </style>
 </head>
@@ -62,8 +76,7 @@
     <div class="container">
         {% for cart in carts %}
         <div class="cart-item">
-            <img class="product-image" src="{% product.image.url %}" alt="{{ cart.product.name }} Image">
-            
+            <img class="product-image" src="{% static cart.product.image.url %}" alt="{{ cart.product.name }} Image">
             <div class="product-details">
                 <h3 class="product-title">{{ cart.product.name }}</h3>
                 <p class="product-price">Total: {{ cart.total }}</p>
@@ -71,7 +84,7 @@
                 <p>Payment Options: {{ cart.payment_options }}</p>
             </div>
             <div class="action-buttons">
-                <a class="action-button" href="{% url 'cart_detail_view' id=cart.id %}">View Cart</a>
+                <a class="action" href="{% url 'cart_detail_view' id=cart.id %}">View Cart</a>
                 <a class="action-button" href="{% url 'cart_edit_view' id=cart.id %}">Edit Cart</a>
             </div>
         </div>
